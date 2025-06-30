@@ -1,1 +1,4 @@
 include: package:flutter_lints/flutter.yaml
+analyzer:
+  errors:
+    override_on_non_overriding_member: ignore

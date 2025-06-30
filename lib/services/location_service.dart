@@ -2,7 +2,7 @@ import 'package:battery_plus/battery_plus.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:flutter/foundation.dart';
 
-/// Interface para serviços de coordenadas (opcional, se quiser utilizar com injeção de dependência futuramente)
+
 abstract class CoordenadaServico {
   Future<Position?> obterPosicaoAtual();
   Stream<Position> escutarFluxoPosicao();
@@ -15,7 +15,7 @@ class ServicoCoordenada implements CoordenadaServico {
       bool servicoHabilitado;
       LocationPermission permissao;
 
-      // Verifica se o serviço de localização está habilitado
+  
       servicoHabilitado = await Geolocator.isLocationServiceEnabled();
       if (!servicoHabilitado) {
         if (kDebugMode) {
@@ -24,7 +24,7 @@ class ServicoCoordenada implements CoordenadaServico {
         return null;
       }
 
-      // Verifica e solicita permissões
+
       permissao = await Geolocator.checkPermission();
       if (permissao == LocationPermission.denied) {
         permissao = await Geolocator.requestPermission();
@@ -43,7 +43,6 @@ class ServicoCoordenada implements CoordenadaServico {
         return null;
       }
 
-      // Obtém o nível da bateria
       final bateria = Battery();
       int nivelBateria;
       try {
@@ -55,7 +54,7 @@ class ServicoCoordenada implements CoordenadaServico {
         nivelBateria = 100;
       }
 
-      // Ajusta precisão com base na bateria
+    
       LocationAccuracy precisao;
       switch (nivelBateria) {
         case > 50:

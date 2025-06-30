@@ -137,7 +137,6 @@ class _TelaMapaEstado extends State<TelaMapa> {
 
         final posicaoAtual = LatLng(coordenadaAtual.latitude, coordenadaAtual.longitude);
 
-        // Atualiza o mapa apenas se a posição mudou
         WidgetsBinding.instance.addPostFrameCallback((_) {
           _atualizarPosicaoMapa(posicaoAtual);
         });

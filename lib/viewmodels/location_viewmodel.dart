@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
-import '../services/servico_coordenada.dart'; // Nome do arquivo alterado conforme a nova classe anterior
+import '../services/servico_coordenada.dart'; 
 
 class CoordenadaControle extends ChangeNotifier {
   final ServicoCoordenada _coordenadaServico = ServicoCoordenada();

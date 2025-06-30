@@ -2,25 +2,6 @@
 
 Este projeto consiste em uma aplicação Flutter que exibe a localização atual do dispositivo utilizando **OpenStreetMap** com o pacote `flutter_map`, integrando recursos de geolocalização e busca de endereço.
 
----
 
-## 🛠️ Melhorias implementadas
 
-Esta versão contém as melhorias solicitadas na **Atividade 4**, conforme orientação em sala de aula:
 
-### ✅ Substituição do ícone padrão do Flutter
-- O ícone padrão foi substituído por um novo ícone personalizado da aplicação.
-
-### ✅ Barra de busca de endereço
-- Campo de busca com integração à API de geocodificação (`geocoding`) para localizar endereços digitados e mover o mapa até o local correspondente.
-
-### ✅ Atualização dinâmica da posição
-- O aplicativo atualiza a posição do marcador no mapa automaticamente à medida que o dispositivo se movimenta, utilizando `Geolocator` com `getPositionStream()`.
-
----
-
-## 🚀 Como executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
